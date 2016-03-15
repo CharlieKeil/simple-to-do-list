@@ -1,5 +1,5 @@
-var $input = $('#simple-list');
-var $list = $(".list");
+var $input = $('#simple-input');
+var $list = $('.list');
 
 $('#simple-list').on('submit', function (e) {
   var $li = $('<li>');
@@ -7,4 +7,8 @@ $('#simple-list').on('submit', function (e) {
   e.preventDefault();
   $li.html($input.val());
   $list.append($li);
+});
+
+$('ul').on('click', 'li', function (e) {
+  $(this).toggleClass('is-clicked');
 });
